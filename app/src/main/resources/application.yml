@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://graduation-postgres:5432/graduation_db
+    username: root
+    password: root
+  sql:
+    init:
+      mode: always             # SQL初期化を常に実行 / never
+      continue-on-error: false # エラーがあれば起動を中止する
+
+      # schemaとdataを作成した際にパスを指定
+      # schema-locations: classpath:schema1.sql, classpath:schema2.sql
+      # data-locations: classpath:data1.sql, classpath:data2.sql
+
+logging:
+  level:
+    org.springframework.jdbc.datasource.init.ScriptUtils: DEBUG # SQL読み込みの詳細ログ
+
+mybatis:
+  config-location: classpath:mybatis-config.xml

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.graduation.app.repository.TypesRepository">
+    <select id="selectAll" resultType="com.graduation.app.entity.Types">
+        <!-- SELECT id, type_name, type_name_ryaku, sort_order, delete_flg, create_user, created_at, modify_user, updated_at FROM serious_case.types -->
+    </select>
+</mapper>
